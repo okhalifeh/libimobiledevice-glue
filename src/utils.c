@@ -1,7 +1,7 @@
 /*
  * utils.c
  * Miscellaneous utilities for string manipulation,
- * file I/O, etc.
+ * file I/O and plist helper.
  *
  * Copyright (c) 2014-2023 Nikias Bassen, All Rights Reserved.
  * Copyright (c) 2013-2014 Martin Szulecki, All Rights Reserved.
@@ -212,12 +212,12 @@ char *string_format_size(uint64_t size)
 	} else {
 		sprintf(buf, "%d Bytes", (int)size);
 	}
-	return strdup(buf);
+	return _strdup(buf);
 }
 
 char *string_toupper(char* str)
 {
-	char *res = strdup(str);
+	char *res = _strdup(str);
 	size_t i;
 	for (i = 0; i < strlen(res); i++) {
 		res[i] = toupper(res[i]);

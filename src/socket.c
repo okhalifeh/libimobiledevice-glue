@@ -117,7 +117,7 @@ void socket_set_verbose(int level)
 
 const char *socket_addr_to_string(struct sockaddr *addr, char *addr_out, size_t addr_out_size)
 {
-#if defined(_WIN32) && ( _WIN32_WINNT < 0x0600 )
+#ifdef _WIN32
 	DWORD addr_out_len = addr_out_size;
 	DWORD addrlen = 0;
 
@@ -134,7 +134,7 @@ const char *socket_addr_to_string(struct sockaddr *addr, char *addr_out, size_t 
 		return NULL;
 	}
 
-	if (WSAAddressToStringA(addr, addrlen, NULL, addr_out, &addr_out_len) == 0) {
+	if (WSAAddressToString(addr, addrlen, NULL, addr_out, &addr_out_len) == 0) {
 		return addr_out;
 	}
 #else
@@ -705,7 +705,7 @@ static int getifaddrs(struct ifaddrs** ifap)
 			ifa->ifa_data = NULL;
 
 			/* name */
-			ifa->ifa_name = strdup(adapter->AdapterName);
+			ifa->ifa_name = _strdup(adapter->AdapterName);
 
 			/* flags */
 			ifa->ifa_flags = 0;
@@ -929,7 +929,7 @@ int get_primary_mac_address(unsigned char mac_addr_buf[6])
 				result = 0;
 				break;
 			}
-#elif defined (WIN32)
+#elif defined (_WIN32)
 			if (ifa->ifa_data) {
 				memcpy(mac_addr_buf, ifa->ifa_data, 6);
 				result = 0;

@@ -29,6 +29,7 @@
 #include "common.h"
 #include "libimobiledevice-glue/thread.h"
 
+#define PACKAGE_VERSION "1.3.1"
 // Reference: https://stackoverflow.com/a/2390626/1806760
 // Initializer/finalizer sample for MSVC and GCC/Clang.
 // 2010-2016 Joe Lowe. Released into the public domain.

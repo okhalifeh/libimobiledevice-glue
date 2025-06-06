@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\cbuf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\collection.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glue.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opack.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\socket.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\termcolors.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tlv.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nskeyedarchive.c" />
+    <ClCompile Include="src\sha1.c" />
+    <ClCompile Include="src\sha256.c" />
+    <ClCompile Include="src\sha512.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{a5b5dedb-80ca-4f01-800d-77ce1679ca53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{5883c2e1-7dc1-4329-9eee-6d56010549f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\endianness.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\cbuf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\collection.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\opack.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\socket.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\termcolors.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\thread.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\tlv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\utils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libimobiledevice-glue\common.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>

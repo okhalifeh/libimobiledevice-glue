@@ -23,7 +23,7 @@ libimobiledevice_glue_1_0_la_SOURCES =	\
 	sha512.c        \
 	common.h
 
-if WIN32
+if _WIN32
 libimobiledevice_glue_1_0_la_LDFLAGS += -avoid-version -static-libgcc
 libimobiledevice_glue_1_0_la_LIBADD += -lws2_32 -lIphlpapi
 endif
